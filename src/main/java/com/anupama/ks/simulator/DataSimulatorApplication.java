@@ -20,7 +20,7 @@ public class DataSimulatorApplication {
 		
 		String data = "(1, 1)";
 		System.out.println(data);
-	    final String uri = "http://localhost:8082/user/consume?data="+data;
+	    final String uri = "http://localhost:8082/data/consumer?data="+data;
 	    System.out.println(uri);
 
 	    RestTemplate restTemplate = new RestTemplate();
