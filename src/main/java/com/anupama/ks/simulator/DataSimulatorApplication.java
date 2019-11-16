@@ -15,12 +15,16 @@ public class DataSimulatorApplication {
 		scheduledataPoint();
 	}
 	
-	@Scheduled(cron = "0 0/02 * * * ?")
+	public void macAddress() {
+		
+	}
+	
+	@Scheduled(cron = "0/5 * * * * ?")
 	public static  void scheduledataPoint() {
 		
 		String data = "(1, 1)";
-		System.out.println(data);
-	    final String uri = "http://localhost:8082/data/consumer?data="+data;
+		String registerMac = "00:0a:95:9d:68:16";
+	    final String uri = "http://localhost:8082/data/consumer?data="+data+"&mac="+registerMac;
 	    System.out.println(uri);
 
 	    RestTemplate restTemplate = new RestTemplate();
